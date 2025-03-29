@@ -1,0 +1,21 @@
+@use 'sass:math';
+$desktop-breakpoint: 'screen and (orientation: landscape)';
+$mobile-breakpoint: 'screen and (orientation: portrait)';
+
+@function get-desktop-size($size) {
+  $width: calc(math.round(calc($size / 19.2) * 1vw * 1000) / 1000);
+  $height: calc(math.round(calc($size / 10.8) * 1svh * 1000) / 1000);
+  @if $size >= 0 {
+    @return min($width, $height);
+  }
+  @return max($width, $height);
+}
+
+@function get-mobile-size($size) {
+  $width: calc(math.round(calc($size / 3.2) * 1vw * 1000) / 1000);
+  $height: calc(math.round(calc($size / 7.4) * 1svh * 1000) / 1000);
+  @if $size >= 0 {
+    @return min($width, $height);
+  }
+  @return max($width, $height);
+}

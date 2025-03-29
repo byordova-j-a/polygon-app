@@ -1,0 +1,24 @@
+<div class="action-panel">
+  <div class="panel-content">
+    <p class="header">Create polygon</p>
+    <action-button action-type="creating"></action-button>
+    <p id="point-indicator"></p>
+    <action-button action-type="draw"></action-button>
+  </div>
+  <div class="panel-content">
+    <p class="header">Create path</p>
+    <div class="button-block">
+      <div class="button-point">
+        <action-button action-type="selecting-first"></action-button>
+        <div class="point" id="first-point"></div>
+      </div>
+      <div class="button-point">
+        <action-button action-type="selecting-second"></action-button>
+        <div class="point" id="second-point"></div>
+      </div>
+      <action-button action-type="change-clockwise"></action-button>
+      <action-button action-type="clear"></action-button>
+    </div>
+    <p id="path"></p>
+  </div>
+</div>

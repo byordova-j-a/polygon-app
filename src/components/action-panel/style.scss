@@ -1,0 +1,141 @@
+@use '~/styles/common.scss' as *;
+
+@media #{$desktop-breakpoint} {
+  .action-panel {
+    width: get-desktop-size(480);
+    height: get-desktop-size(1000);
+    padding: get-desktop-size(10) get-desktop-size(20);
+    gap: get-desktop-size(50);
+  }
+
+  #point-indicator {
+    font-size: get-desktop-size(14);
+    height: get-desktop-size(14);
+    margin: get-desktop-size(7) get-desktop-size(15) get-desktop-size(7) 0;
+    letter-spacing: get-desktop-size(-0.5);
+  }
+
+  .panel-content:first-child .header {
+    margin-bottom: get-desktop-size(15);
+  }
+
+  .panel-content:not(:first-child) .header {
+    margin-bottom: get-desktop-size(25);
+  }
+
+  .header {
+    font-size: get-desktop-size(20);
+  }
+
+  .button-block {
+    gap: get-desktop-size(20);
+  }
+
+  .point {
+    font-size: get-desktop-size(20);
+    padding-right: get-desktop-size(25);
+  }
+
+  #path {
+    font-size: get-desktop-size(20);
+    margin-top: get-desktop-size(30);
+  }
+}
+
+@media #{$mobile-breakpoint} {
+  .action-panel {
+    width: get-mobile-size(300);
+    height: get-mobile-size(370);
+    padding-top: get-mobile-size(10);
+    justify-content: space-between;
+  }
+
+  #point-indicator {
+    font-size: get-mobile-size(12);
+    height: get-mobile-size(12);
+    margin: get-mobile-size(7) get-mobile-size(15) get-mobile-size(7) 0;
+    letter-spacing: get-mobile-size(-0.5);
+  }
+
+  .panel-content .header {
+    margin-bottom: get-mobile-size(15);
+  }
+
+  .header {
+    font-size: get-mobile-size(15);
+  }
+
+  .button-block {
+    gap: get-mobile-size(10);
+  }
+
+  .point {
+    font-size: get-mobile-size(15);
+    padding-right: get-mobile-size(15);
+  }
+
+  #path {
+    font-size: get-mobile-size(15);
+    margin-top: get-mobile-size(15);
+    height: get-mobile-size(30);
+  }
+}
+.red-indicator {
+  color: red;
+}
+
+.green-indicator {
+  color: #8fe88f;
+}
+
+.action-panel {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.panel-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#point-indicator {
+  font-weight: bold;
+  align-self: end;
+  font-family: sans-serif;
+}
+
+.header {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 1000;
+  align-self: center;
+}
+
+.button-point {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.point {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#path {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 1000;
+}
